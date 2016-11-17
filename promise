@@ -1,0 +1,28 @@
+
+By completing this exercise, you should be able to answer the following questions.
+
+    Why is promise invented? What is inconvenient WITHOUT it?
+	
+	：1、promise 可以看成一个容器，拿来放 迟一点结束的事件 的结果，很好处理单线程异步请求问题。2、将异步函数和回调函数分离，使代码更加优雅。
+         更好地让我们地掌握代码的流程。
+
+	：回调函数层层嵌套，不好管理
+
+
+
+    Is there any code snippet within a promise constructor executed IMMEDIATELY?
+
+	：yes  promise对象已经处于 fulfilled 或 rejected 状态，（resolve，reject）
+	
+    What's the limitation of passing parameter(s) to the then method by resolve?
+
+	：then方法接受两个参数，可以是函数，也可以是一个具体的值，还可以是另一个promise。
+
+    What's the return type of a catch-block in a promise chain?
+
+	：也是一个promise对象（只处理promise拒绝的情况，返回promise）
+	
+    Is it good to use multiple INTERLEAVING catch-blocks in a promise chain? 
+
+        ：yes 抛出的异常更加精确
+
